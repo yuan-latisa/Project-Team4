@@ -10,7 +10,6 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
 .header {
      padding: 20px 40px 40px;
   background-image: url("../assets/background.png");
@@ -28,7 +27,6 @@ body {
     font-weight: bold;
 }
 
-/* MAIN */
 .main {
     display: flex;
     height: calc(100vh - 120px);
@@ -47,7 +45,7 @@ body {
 
 .left img {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 /* RIGHT */

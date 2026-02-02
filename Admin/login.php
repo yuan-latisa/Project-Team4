@@ -24,16 +24,14 @@ if (isset($_POST['login'])) {
 
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <title>Login | LombaNih</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
 
-    <header class="header">
+<header class="header">
         <section id="home">
             <nav>
                 <div class="brand">
@@ -44,31 +42,30 @@ if (isset($_POST['login'])) {
         </section>
     </header>
 
-    <div class="main">
-        <div class="left">
-            <img src="../assets/elemen2.jpg" alt="Login Illustration">
-        </div>
-
-        <div class="right">
-            <div class="card">
-                <h2>LOGIN</h2>
-
-                <form method="post">
-                    <label>Username</label>
-                    <input type="text" name="username" placeholder="Masukkan username" required>
-
-                    <label>Password</label>
-                    <input type="password" name="password" placeholder="Masukkan password" required>
-
-                    <div class="button-area">
-                        <button type="submit" name="login" class="btn login">Login</button>
-                        <button type="reset" class="btn reset">Reset</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="main">
+    <div class="left">
+        <img src="../assets/elemen2.jpg" alt="Login Illustration">
     </div>
 
-</body>
+    <div class="right">
+        <div class="card">
+            <h2>LOGIN</h2>
 
+            <form method="post">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Masukkan username" required>
+
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Masukkan password" required>
+
+                <div class="button-area">
+                    <button type="submit" name="login" class="btn login">Login</button>
+                    <button type="reset" class="btn reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
