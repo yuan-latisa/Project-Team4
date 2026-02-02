@@ -435,3 +435,12 @@ nav ul {
   font-weight: 600;
   margin: 0;
 }
+
+.no-result {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: gray;
+  margin-top: 40px;
+  display: none;
+}

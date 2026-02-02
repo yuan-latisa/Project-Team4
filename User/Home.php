@@ -17,7 +17,7 @@
         <section id="home">
             <nav>
                 <div class="brand">
-                    <img src="../assets/logo.jpg" class="logo">
+                    <img src="../assets/Logo.png" class="logo">
                     <h3>Lomba<span>Nih</span></h3>
                 </div>
                 <ul>
@@ -33,13 +33,13 @@
             </div>
             <div class="search-box">
                 <img src="../assets/search.png" class="search-icon">
-                <input type="search" placeholder="Cari lomba...">
+                <input type="search" id="searchInput" placeholder="Cari lomba...">
             </div>
             <div class="filter">
-                <button class="chip" data-text="Gratis">Gratis</button>
-                <button class="chip" data-text="Berbayar">Berbayar</button>
-                <button class="chip" data-text="Tim">Tim</button>
-                <button class="chip" data-text="Solo">Solo</button>
+                <button class="chip" data-filter="gratis">Gratis</button>
+                <button class="chip" data-filter="berbayar">Berbayar</button>
+                <button class="chip" data-filter="tim">Tim</button>
+                <button class="chip" data-filter="individu">Individu</button>
             </div>
 
         </section>
@@ -52,7 +52,7 @@
             <div class="grid-lomba">
 
                 <!-- Card 1 -->
-                <div class="lomba-card-xxl">
+                <div class="lomba-card-xxl" data-filter="individu berbayar">
                     <div class="lomba-poster">
                         <img src="../assets/poster1.png">
                     </div>
@@ -69,21 +69,21 @@
 
                             <div class="meta-item">
                                 <img src="../assets/location.png" class="meta-icon">
-                                <span>SMKN 1 CIBINONG</span>
+                                <span>Offline (SMKN 1 CIBINONG)</span>
                             </div>
 
                             <div class="meta-item">
                                 <img src="../assets/date.png" class="meta-icon">
-                                <span>10 - 15 Feb 2025</span>
+                                <span>10 - 15 Feb 2026</span>
                             </div>
                         </div>
 
-                        <a href="detail.php?id=game" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
+                        <a href="detail.php?id=web" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="lomba-card-xxl">
+                <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
                         <img src="../assets/poster1.png">
                     </div>
@@ -105,16 +105,16 @@
 
                             <div class="meta-item">
                                 <img src="../assets/date.png" class="meta-icon">
-                                <span>20 - 25 Feb 2025</span>
+                                <span>20 - 25 Feb 2026</span>
                             </div>
                         </div>
 
-                        <a href="#" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
+                        <a href="detail.php?id=game" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="lomba-card-xxl">
+                <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
                         <img src="../assets/poster1.png">
                     </div>
@@ -131,21 +131,22 @@
 
                             <div class="meta-item">
                                 <img src="../assets/location.png" class="meta-icon">
-                                <span>SMKN 1 Cibinong</span>
+                                <span>Offline (SMKN 1 CIBINONG)</span>
                             </div>
 
                             <div class="meta-item">
                                 <img src="../assets/date.png" class="meta-icon">
-                                <span>20 - 25 Apr 2025</span>
+                                <span>20 - 25 Apr 2026</span>
                             </div>
                         </div>
 
-                        <a href="#" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
+                        <a href="detail.php?id=itSupport" class="btn-lihat">Lihat detail <span
+                                class="arrow">›</span></a>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="lomba-card-xxl">
+                <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
                         <img src="../assets/poster1.png">
                     </div>
@@ -162,21 +163,21 @@
 
                             <div class="meta-item">
                                 <img src="../assets/location.png" class="meta-icon">
-                                <span>SMKN 1 Cibinong</span>
+                                <span>Offline (SMKN 1 CIBINONG)</span>
                             </div>
 
                             <div class="meta-item">
                                 <img src="../assets/date.png" class="meta-icon">
-                                <span>20 - 25 Feb 2025</span>
+                                <span>10 - 15 Feb 2026</span>
                             </div>
                         </div>
 
-                        <a href="#" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
+                        <a href="detail.php?id=network" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
                     </div>
                 </div>
 
                 <!-- Card 5 -->
-                <div class="lomba-card-xxl">
+                <div class="lomba-card-xxl" data-filter="individu gratis">
                     <div class="lomba-poster">
                         <img src="../assets/poster1.png">
                     </div>
@@ -198,16 +199,16 @@
 
                             <div class="meta-item">
                                 <img src="../assets/date.png" class="meta-icon">
-                                <span>20 - 25 Feb 2025</span>
+                                <span>20 - 23 Feb 2026</span>
                             </div>
                         </div>
 
-                        <a href="#" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
+                        <a href="detail.php?id=cyber" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
-                <div class="lomba-card-xxl">
+                <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
                         <img src="../assets/poster1.png">
                     </div>
@@ -229,15 +230,17 @@
 
                             <div class="meta-item">
                                 <img src="../assets/date.png" class="meta-icon">
-                                <span>20 - 25 Feb 2025</span>
+                                <span>15 - 25 Feb 2026</span>
                             </div>
                         </div>
 
-                        <a href="#" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
+                        <a href="detail.php?id=ml" class="btn-lihat">Lihat detail <span class="arrow">›</span></a>
                     </div>
                 </div>
-
             </div>
+
+            <p id="noResult" class="no-result">Tidak ada lomba ditemukan.</p>
+
         </section>
 
         <section class="panduan" id="panduan">
@@ -271,7 +274,7 @@
 
             <div class="footer-left">
                 <div class="footer-brand">
-                    <img src="../assets/logo.jpg" class="footer-logo" alt="logo">
+                    <img src="../assets/Logo.png" class="footer-logo" alt="logo">
                     <div>
                         <h3>LombaNih</h3>
                         <p>Portal info &<br>pendaftaran lomba IT</p>
@@ -280,43 +283,84 @@
             </div>
 
             <div class="footer-right">
-                <h4>Kontak</h4>
-                <div class="footer-contact">
-                    <img src="../assets/wa.png" alt="wa">
-                    <span>08xx-xxxx-xxxx</span>
-                </div>
-                <div class="footer-contact">
-                    <img src="../assets/ig.png" alt="ig">
-                    <span>@lombanih</span>
-                </div>
-                <div class="footer-contact">
-                    <img src="../assets/email.png" alt="email">
-                    <span>lombanih@smkn1.sch.id</span>
-                </div>
-            </div>
+  <h4>Kontak</h4>
+  <div class="footer-contact">
+    <a href="https://wa.me/6285718583295?text=Halo%20saya%20ingin%20bertanya%20tentang%20lomba" target="_blank">
+      <img src="../assets/wa.png" alt="wa">
+      <span>0857-1858-3295</span>
+    </a>
+  </div>
+  <div class="footer-contact">
+    <a href="https://www.instagram.com/lomba.nih?igsh=MTd3MzY0ZjlhOTA5aQ==" target="_blank">
+      <img src="../assets/ig.png" alt="ig">
+      <span>@lombanih</span>
+    </a>
+  </div>
+  <div class="footer-contact">
+    <a href="mailto:lombanih@gmail.com">
+      <img src="../assets/email.png" alt="email">
+      <span>lombanih@gmail.com</span>
+    </a>
+  </div>
+</div>
+
         </div>
         <hr class="footer-line">
         <p class="footer-copy">&#169; 2026 LombaNih — SMKN 1 Cibinong</p>
     </footer>
 
     <script>
+        const searchInput = document.getElementById("searchInput");
+        const cards = document.querySelectorAll(".lomba-card-xxl");
         const chips = document.querySelectorAll(".chip");
-        chips.forEach(chip => {
-            chip.addEventListener("click", function (e) {
-                if (e.target.classList.contains("close")) {
-                    e.stopPropagation();
-                    chip.classList.remove("active");
-                    chip.innerHTML = chip.dataset.text;
-                    return;
-                }
 
-                if (!chip.classList.contains("active")) {
-                    chip.classList.add("active");
-                    chip.innerHTML = chip.dataset.text + `<span class="close">×</span>`;
+        let activeFilters = [];
+
+        function applyFilter() {
+            const keyword = searchInput.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const title = card.querySelector(".lomba-title").textContent.toLowerCase();
+                const tags = (card.dataset.filter || "").toLowerCase();
+                const matchSearch = title.includes(keyword);
+                let matchChip = true;
+                if (activeFilters.length > 0) {
+                    matchChip = activeFilters.every(f => tags.includes(f));
                 }
+                if (matchSearch && matchChip) {
+                    card.style.display = "flex";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            const noResult = document.getElementById("noResult");
+            if (visibleCount === 0) {
+                noResult.style.display = "block";
+            } else {
+                noResult.style.display = "none";
+            }
+        }
+
+        searchInput.addEventListener("input", applyFilter);
+        chips.forEach(chip => {
+            chip.addEventListener("click", () => {
+                const f = chip.dataset.filter;
+                if (activeFilters.includes(f)) {
+                    activeFilters = activeFilters.filter(x => x !== f);
+                    chip.classList.remove("active");
+                } else {
+                    activeFilters.push(f);
+                    chip.classList.add("active");
+                }
+                applyFilter();
             });
         });
     </script>
+
+
 </body>
 
 </html>

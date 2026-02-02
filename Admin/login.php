@@ -1,64 +1,74 @@
 <?php
-include 'config.php';
 session_start();
 
-if (isset($_SESSION['Username']) && isset($_SESSION['Password'])) {
+if (isset($_SESSION['login'])) {
     header("Location: dashboard.php");
     exit;
 }
 
 if (isset($_POST['login'])) {
-    $username = $_POST['Username'];
-    $password = $_POST['Password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    $query = "SELECT * FROM tb_user WHERE Username='$username' AND Password='$password'";
-    $result = mysqli_query($conn, $query);
+    if ($username == "admin" && $password == "12345") {
+        $_SESSION['login'] = true;
+        $_SESSION['username'] = $username;
 
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['Username'] = $row['Username'];
-        $_SESSION['Password'] = $row['Password'];
-        header("location: dashboard.php");
+        header("Location: dashboard.php");
         exit;
-        } else {
-            echo "<script>alert('Username atau password anda salah. Silahkan coba lagi!');</script>";
-        }
+    } else {
+        $error = "Username atau Password salah!";
     }
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login | LombaNih</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Login Administrator</h1>
-    <form action="" name="Login" method="post">
-        <table>
-            <tr>
-                <td>Username</td>
-                <td><input type="text" name="Username" id="user" maxlength="50" placeholder="Masukkan username"
-                        required></td>
-            </tr>
-            <tr>
-                <td>Nama</td>
-                <td><input type="text" name="Nama" id="name" maxlength="6" placeholder="Masukkan nama" required></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="password" name="Password" id="pass" maxlength="50" placeholder="Masukkan password"
-                        required></td>
-            </tr>
-            <tr>
-                <td><button type="submit" name="login" value="Login">Login</button></td>
-                <td><button type="reset">Reset</button></td>
-            </tr>
-        </table>
-    </form>
+
+    <header class="header">
+        <section id="home">
+            <nav>
+                <div class="brand">
+                    <img src="../assets/logo.jpg" class="logo">
+                    <h3>Lomba<span>Nih</span></h3>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <div class="main">
+        <div class="left">
+            <img src="../assets/elemen2.jpg" alt="Login Illustration">
+        </div>
+
+        <div class="right">
+            <div class="card">
+                <h2>LOGIN</h2>
+
+                <form method="post">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Masukkan username" required>
+
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Masukkan password" required>
+
+                    <div class="button-area">
+                        <button type="submit" name="login" class="btn login">Login</button>
+                        <button type="reset" class="btn reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
