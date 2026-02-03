@@ -1,3 +1,14 @@
+<?php
+session_start();
+include "../Admin/koneksi.php";
+$data = null;
+if (isset($_GET['nis'])) {
+    $nis = mysqli_real_escape_string($koneksi, $_GET['nis']);
+    $q = mysqli_query($koneksi, "SELECT * FROM tb_peserta WHERE nis='$nis' LIMIT 1");
+    $data = mysqli_fetch_assoc($q);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -32,32 +43,59 @@
     <main class="bukti-page">
         <h1 class="bukti-title">BUKTI PENDAFTARAN</h1>
 
-        <div class="bukti-card">
-            <table class="bukti-table">
-                <tr>
-                    <td>NISN :</td>
-                    <td id="outNisn">-</td>
-                </tr>
-                <tr>
-                    <td>Nama :</td>
-                    <td id="outNama">-</td>
-                </tr>
-                <tr>
-                    <td>Email :</td>
-                    <td id="outEmail">-</td>
-                </tr>
-                <tr>
-                    <td>No Telepon :</td>
-                    <td id="outTelp">-</td>
-                </tr>
-                <tr>
-                    <td>Kategori Lomba :</td>
-                    <td id="outKategori">-</td>
-                </tr>
-            </table>
+        <?php
+        include "../Admin/koneksi.php";
 
-            <button class="btn-cetak" onclick="window.print()">Cetak Pendaftaran</button>
-        </div>
+        $data = null;
+        if (isset($_GET['nis'])) {
+            $nis = mysqli_real_escape_string($koneksi, $_GET['nis']);
+            $q = mysqli_query($koneksi, "SELECT * FROM tb_peserta WHERE nis='$nis' LIMIT 1");
+            $data = mysqli_fetch_assoc($q);
+        }
+        ?>
+
+        <?php if (!$data) { ?>
+            <div class="empty-data">
+                Data tidak ditemukan tidak ada.
+            </div>
+        <?php } else { ?>
+            <div class="bukti-card">
+                <table class="bukti-table">
+                    <tr>
+                        <td>NIS :</td>
+                        <td><?= htmlspecialchars($data['nis']) ?></td>
+                    </tr>
+                    <tr>
+                        <td>Nama :</td>
+                        <td><?= htmlspecialchars($data['nama']) ?></td>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <td><?= htmlspecialchars($data['email']) ?></td>
+                    </tr>
+                    <tr>
+                        <td>No Telepon :</td>
+                        <td><?= htmlspecialchars($data['no_telp']) ?></td>
+                    </tr>
+                    <tr>
+                        <td>Kategori Lomba :</td>
+                        <td><?= htmlspecialchars($data['kategori_lomba']) ?></td>
+                    </tr>
+                </table>
+
+                <div class="btn-group">
+                    <button class="btn-cetak" onclick="window.print()">
+                        Cetak Pendaftaran
+                    </button>
+
+                    <button type="button" class="btn-keluar" onclick="window.location.href='Home.php'">
+                        Keluar
+                    </button>
+                </div>
+
+            </div>
+        <?php } ?>
+
     </main>
 
     <footer class="footer">

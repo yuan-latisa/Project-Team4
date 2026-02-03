@@ -28,8 +28,9 @@
             </nav>
         </section>
     </header>
+
     <main class="detail-page">
-        <a href="Home.php" class="back-link"> ← Kembali</a>
+        <a href="Home.php" class="back-link"> ‹ Kembali</a>
 
         <section class="detail-grid">
             <div class="detail-left">
@@ -68,12 +69,12 @@
                     <strong>Informasi</strong>
                     <p id="deskripsi">-</p>
                 </div>
-                <a id="btnDaftar" href="#" class="btn-daftar">Daftar <span class="arrow">›</span></a>
+                <a id="btnDaftar" href="Daftar.php" class="btn-daftar">Daftar <span class="arrow">›</span></a>
             </div>
         </section>
     </main>
 
-   <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
 
             <div class="footer-left">
@@ -87,26 +88,27 @@
             </div>
 
             <div class="footer-right">
-  <h4>Kontak</h4>
-  <div class="footer-contact">
-    <a href="https://wa.me/6285718583295?text=Halo%20saya%20ingin%20bertanya%20tentang%20lomba" target="_blank">
-      <img src="../assets/wa.png" alt="wa">
-      <span>0857-1858-3295</span>
-    </a>
-  </div>
-  <div class="footer-contact">
-    <a href="https://www.instagram.com/lomba.nih?igsh=MTd3MzY0ZjlhOTA5aQ==" target="_blank">
-      <img src="../assets/ig.png" alt="ig">
-      <span>@lombanih</span>
-    </a>
-  </div>
-  <div class="footer-contact">
-    <a href="mailto:lombanih@gmail.com">
-      <img src="../assets/email.png" alt="email">
-      <span>lombanih@gmail.com</span>
-    </a>
-  </div>
-</div>
+                <h4>Kontak</h4>
+                <div class="footer-contact">
+                    <a href="https://wa.me/6285718583295?text=Halo%20saya%20ingin%20bertanya%20tentang%20lomba"
+                        target="_blank">
+                        <img src="../assets/wa.png" alt="wa">
+                        <span>0857-1858-3295</span>
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <a href="https://www.instagram.com/lomba.nih?igsh=MTd3MzY0ZjlhOTA5aQ==" target="_blank">
+                        <img src="../assets/ig.png" alt="ig">
+                        <span>@lombanih</span>
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:lombanih@gmail.com">
+                        <img src="../assets/email.png" alt="email">
+                        <span>lombanih@gmail.com</span>
+                    </a>
+                </div>
+            </div>
 
         </div>
         <hr class="footer-line">

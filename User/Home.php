@@ -85,7 +85,7 @@
                 <!-- Card 2 -->
                 <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
-                        <img src="../assets/poster1.png">
+                        <img src="../assets/poster2.png">
                     </div>
 
                     <div class="lomba-info">
@@ -116,7 +116,7 @@
                 <!-- Card 3 -->
                 <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
-                        <img src="../assets/poster1.png">
+                        <img src="../assets/poster3.png">
                     </div>
 
                     <div class="lomba-info">
@@ -148,7 +148,7 @@
                 <!-- Card 4 -->
                 <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
-                        <img src="../assets/poster1.png">
+                        <img src="../assets/poster4.png">
                     </div>
 
                     <div class="lomba-info">
@@ -179,7 +179,7 @@
                 <!-- Card 5 -->
                 <div class="lomba-card-xxl" data-filter="individu gratis">
                     <div class="lomba-poster">
-                        <img src="../assets/poster1.png">
+                        <img src="../assets/poster6.png">
                     </div>
 
                     <div class="lomba-info">
@@ -210,7 +210,7 @@
                 <!-- Card 6 -->
                 <div class="lomba-card-xxl" data-filter="tim berbayar">
                     <div class="lomba-poster">
-                        <img src="../assets/poster1.png">
+                        <img src="../assets/poster5.png">
                     </div>
 
                     <div class="lomba-info">
@@ -360,7 +360,6 @@
             });
         });
     </script>
-
 
 </body>
 
