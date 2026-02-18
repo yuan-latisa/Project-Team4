@@ -9,7 +9,6 @@ body{
   background:#f6f6f6;
 }
 
-/* HEADER sama persis login */
 .header{
   padding:20px 40px 40px;
   background-image:url("../assets/background.png");
@@ -51,7 +50,6 @@ nav{
   color:#6435AC;
 }
 
-/* menu kanan */
 .menu{
   list-style:none;
   display:flex;
